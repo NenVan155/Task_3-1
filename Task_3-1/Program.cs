@@ -11,11 +11,11 @@ class Program
 
         odTest1[0] = -111;
         odTest1.PrintArr();
-        odTest2.ReFillArr(5);
+        odTest2.FillArr(5);
         odTest2.PrintArr();
-        int[] uniq = odTest2.GetUniq;
-        int[] modLessThanHundred = odTest1.GetModLessThanHundred;
-        double avg = odTest1.GetAvg;
+        int[] uniq = odTest2.Uniq;
+        int[] modLessThanHundred = odTest1.ModLessThanHundred;
+        double avg = odTest1.Avg;
 
         Console.WriteLine("Unique values: ");
         foreach(int i in uniq)
@@ -41,13 +41,13 @@ class Program
         TwoDimention tdTest2 = new TwoDimention(3, 3, true);
         tdTest2.PrintArr();
 
-        avg = tdTest2.GetAvg;
+        avg = tdTest2.Avg;
         Console.WriteLine("Average value: " + avg);
 
         tdTest1[2, 1] = 69;
         tdTest1.DoublePrint();
 
-        tdTest2.ReFillArr(4, 4);
+        tdTest2.FillArr(4, 4);
         tdTest2.PrintArr();
 
         Console.WriteLine("---------------");
@@ -60,13 +60,13 @@ class Program
         ldTest2[0, 0] = 69;
         ldTest2.PrintArr();
         
-        avg = ldTest2.GetAvg;
+        avg = ldTest2.Avg;
         Console.WriteLine("Average value: " + avg);
 
-        ldTest1.ReFillArr(4);
+        ldTest1.FillArr(4);
         ldTest1.PrintArr();
 
-        double[] avgs = ldTest1.GetAvgForEveryNested;
+        double[] avgs = ldTest1.AvgForEveryNested;
         Console.WriteLine("Avgs for every nested array: ");
         foreach(double i in avgs)
         {
@@ -74,7 +74,7 @@ class Program
         }
         Console.WriteLine();
 
-        int[][] productionsOfIndexes = ldTest1.GetWithEveryEvenToIndexProduct;
+        int[][] productionsOfIndexes = ldTest1.WithEveryEvenToIndexProduct;
         Console.WriteLine("Your ladder array with indexes products: ");
         foreach(int[] line in productionsOfIndexes)
         {

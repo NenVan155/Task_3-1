@@ -6,7 +6,7 @@ class LadderArrs
 
     public LadderArrs(int depth, bool userFill = false)
     {
-        ReFillArr(depth, userFill);
+        FillArr(depth, userFill);
     }
 
     public int this[int index1, int index2]
@@ -21,7 +21,7 @@ class LadderArrs
         }
     }
 
-    public double GetAvg
+    public double Avg
     {
         get
         {
@@ -33,11 +33,11 @@ class LadderArrs
                     sum += num;
                 }
             }
-            return sum / _myArr.Length;
+            return sum / (double) _myArr.Length;
         }
     }
 
-    public double[] GetAvgForEveryNested
+    public double[] AvgForEveryNested
     {
         get
         {
@@ -49,14 +49,14 @@ class LadderArrs
                 {
                     sum += _myArr[i][j];
                 }
-                toRet[i] = sum / _myArr[i].Length;
+                toRet[i] = sum / (double) _myArr[i].Length;
                 sum = 0;
             }
             return toRet;
         }
     }
 
-    public int[][] GetWithEveryEvenToIndexProduct
+    public int[][] WithEveryEvenToIndexProduct
     {
         get
         {
@@ -93,7 +93,7 @@ class LadderArrs
         }
     }
 
-    public void ReFillArr(int depth, bool userFill = false)
+    public void FillArr(int depth, bool userFill = false)
     {
         _myArr = new int[depth][];
         if (userFill)

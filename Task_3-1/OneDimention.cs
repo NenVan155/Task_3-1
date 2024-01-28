@@ -6,7 +6,7 @@ class OneDimention
 
     public OneDimention(int length, bool userFill = false)
     {
-        ReFillArr(length, userFill);
+        FillArr(length, userFill);
     }
 
     public int this[int index]
@@ -21,7 +21,7 @@ class OneDimention
         }
     }
 
-    public double GetAvg
+    public double Avg
     {
         get
         {
@@ -30,11 +30,11 @@ class OneDimention
             {
                 sum += num;
             }
-            return sum / _myArr.Length;
+            return sum / (double) _myArr.Length;
         }
     }
 
-    public int[] GetUniq
+    public int[] Uniq
     {
         get
         {
@@ -62,7 +62,7 @@ class OneDimention
         }
     }
 
-    public int[] GetModLessThanHundred
+    public int[] ModLessThanHundred
     {
         get
         {
@@ -89,7 +89,7 @@ class OneDimention
         Console.WriteLine();
     }
 
-    public void ReFillArr(int length, bool userFill = false)
+    public void FillArr(int length, bool userFill = false)
     {
         _myArr = new int[length];
         if (userFill)

@@ -6,7 +6,7 @@ class TwoDimention
 
     public TwoDimention(int depth, int length, bool userFill = false)
     {
-        ReFillArr(depth, length, userFill);
+        FillArr(depth, length, userFill);
     }
 
     public int this[int index1, int index2]
@@ -21,7 +21,7 @@ class TwoDimention
         }
     }
 
-    public double GetAvg
+    public double Avg
     {
         get
         {
@@ -33,7 +33,7 @@ class TwoDimention
                     sum += _myArr[i, j];
                 }
             }
-            return sum / _myArr.Length;
+            return sum / (double) _myArr.Length;
         }
     }
 
@@ -71,7 +71,7 @@ class TwoDimention
         }
     }
 
-    public void ReFillArr(int depth, int length, bool userFill = false)
+    public void FillArr(int depth, int length, bool userFill = false)
     {
         _myArr = new int[depth, length];
         if (userFill)
