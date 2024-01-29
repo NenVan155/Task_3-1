@@ -11,21 +11,15 @@ class LadderArrs
 
     public int this[int index1, int index2]
     {
-        get
-        {
-            return _myArr[index1][index2];
-        }
-        set
-        {
-            _myArr[index1][index2] = value;
-        }
+        get { return _myArr[index1][index2]; }
+        set { _myArr[index1][index2] = value; }
     }
 
     public double Avg
     {
         get
         {
-            int sum = 0;
+            double sum = 0;
             foreach (int[] line in _myArr)
             {
                 foreach (int num in line)
@@ -33,7 +27,7 @@ class LadderArrs
                     sum += num;
                 }
             }
-            return sum / (double) _myArr.Length;
+            return sum / _myArr.Length;
         }
     }
 
@@ -42,14 +36,14 @@ class LadderArrs
         get
         {
             double[] toRet = new double[_myArr.GetLength(0)];
-            int sum = 0;
+            double sum = 0;
             for (int i = 0; i < _myArr.GetLength(0); i++)
             {
                 for (int j = 0; j < _myArr[i].Length; j++)
                 {
                     sum += _myArr[i][j];
                 }
-                toRet[i] = sum / (double) _myArr[i].Length;
+                toRet[i] = sum / _myArr[i].Length;
                 sum = 0;
             }
             return toRet;

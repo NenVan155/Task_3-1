@@ -11,26 +11,20 @@ class OneDimention
 
     public int this[int index]
     {
-        get
-        {
-            return _myArr[index];
-        }
-        set
-        {
-            _myArr[index] = value;
-        }
+        get { return _myArr[index]; }
+        set { _myArr[index] = value; }
     }
 
     public double Avg
     {
         get
         {
-            int sum = 0;
+            double sum = 0;
             foreach (int num in _myArr)
             {
                 sum += num;
             }
-            return sum / (double) _myArr.Length;
+            return sum / _myArr.Length;
         }
     }
 

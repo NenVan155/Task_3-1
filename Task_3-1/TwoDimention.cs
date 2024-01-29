@@ -11,21 +11,15 @@ class TwoDimention
 
     public int this[int index1, int index2]
     {
-        get
-        {
-            return _myArr[index1, index2];
-        }
-        set
-        {
-            _myArr[index1, index2] = value;
-        }
+        get { return _myArr[index1, index2]; }
+        set { _myArr[index1, index2] = value; }
     }
 
     public double Avg
     {
         get
         {
-            int sum = 0;
+            double sum = 0;
             for (int i = 0; i < _myArr.GetLength(0); i++)
             {
                 for (int j = 0; j < _myArr.GetLength(1); j++)
@@ -33,7 +27,7 @@ class TwoDimention
                     sum += _myArr[i, j];
                 }
             }
-            return sum / (double) _myArr.Length;
+            return sum / _myArr.Length;
         }
     }
 
